@@ -7,8 +7,6 @@ def larestObj(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # convert to grayscale
     # threshold to get just the signature (INVERTED)
     retval, thresh_gray = cv2.threshold(gray, thresh=100, maxval=255,type=cv2.THRESH_BINARY_INV)
-
-
     contours, hierarchy = cv2.findContours(thresh_gray,cv2.RETR_LIST,cv2.CHAIN_APPROX_SIMPLE)
 
     # Find object with the biggest bounding box
