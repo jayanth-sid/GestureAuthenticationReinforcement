@@ -1,5 +1,4 @@
 from cryptography.fernet import Fernet
-import csv
 from os import listdir
 
 def create_user(id,pwd,gpwd):
